@@ -1,0 +1,181 @@
+/* General Container Styling */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #1e1e2f;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  /* Title and Header */
+  .dashboard-header {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #b388ff;
+    margin-bottom: 10px;
+  }
+  
+  .dashboard-header p {
+    font-size: 1.3rem;
+    color: #aaaaaa;
+  }
+  
+  /* Card Styles */
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1100px;
+    margin-bottom: 40px;
+    padding: 0 20px;
+  }
+  
+  .card {
+    background: #2d2d3a;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    border: 1px solid #3b3b4d;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    background: #3b3b4d;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Input Prompt Styling */
+  .prompt-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+  }
+  
+  .prompt-container input {
+    flex: 1;
+    padding: 0.8rem;
+    border-radius: 25px;
+    border: 1px solid #444;
+    background: #2d2d3a;
+    color: #ffffff;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
+    padding-left: 15px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .prompt-container input:focus {
+    border-color: #6a11cb;
+  }
+  
+  .prompt-container input::placeholder {
+    color: #bbb;
+  }
+  
+  .prompt-container button {
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+  }
+  
+  .prompt-container button:hover {
+    background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+    transform: translateY(-3px);
+  }
+  
+  /* Logout Button */
+  .logout-button {
+    background: #ff4c4c;
+    color: #ffffff;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+  }
+  
+  .logout-button:hover {
+    background: #e03e3e;
+    transform: translateY(-3px);
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .dashboard-header h1 {
+      font-size: 2rem;
+    }
+  
+    .dashboard-header p {
+      font-size: 1rem;
+    }
+  
+    .card-container {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+    }
+  
+    .prompt-container input {
+      font-size: 0.9rem;
+      padding: 0.7rem;
+    }
+  
+    .prompt-container button {
+      padding: 0.7rem 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .dashboard-header h1 {
+      font-size: 1.8rem;
+    }
+  
+    .card-container {
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    }
+  
+    .logout-button {
+      padding: 0.4rem 1rem;
+      top: 15px;
+      right: 15px;
+    }
+  
+    .prompt-container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .prompt-container button {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  
